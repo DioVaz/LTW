@@ -6,7 +6,7 @@ DROP TABLE IF EXISTS invoice;
 DROP TABLE IF EXISTS line;
 
 
-
+/*asdasdasdasdasd*/
 
 
 CREATE TABLE user
