@@ -1,0 +1,131 @@
+@charset "utf-8";
+body {
+	font: 100%/1.4 Verdana;
+	background-color: #42213D;
+	margin: 0;
+	padding: 0;
+	color: #000;
+}
+
+
+ul, ol, dl { 
+	padding: 100;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {/* Headers */
+	margin-top: 0;
+	padding-right: 15px;
+	padding-left: 15px;
+	font-size: 250%;
+	color: #FFF;
+	
+	
+}
+
+#product_list{
+	border-bottom:thick;
+}
+
+#menu a{/* menu */
+	padding-left:10px;
+	margin-right:20px;
+	border-left-style:solid;
+	border-left-color:white;
+	color:#009;
+	
+}
+
+#menu a:first-child {
+	border-left-style:none;
+}
+
+a img { /* remover contorno da imagem */
+	border: none;
+}
+
+
+/*  link efects. ~~ */
+a:link {
+	color: #42413C;
+	text-decoration:underline 
+}
+a:visited {
+	color: #6E6C64;
+	text-decoration: underline;
+}
+a:hover, a:active, a:focus { /* remover a linha dos links para estes 3 eventos*/
+	text-decoration:none;
+}
+
+/* conteiner */
+.container {
+	width: 960px;
+	background-color: #FFF;
+	margin: 0 auto; /* centrar  */
+	bottom:0;
+}
+
+/* header */
+.header {
+	margin-top:10px;
+	margin-bottom:0px;
+	text-align:right;
+	background-color: #ADB99A;
+}
+
+/*creditos*/
+.creditos{
+	padding: 50;
+	padding-bottom: 50;
+}
+/*content*/
+
+.content {
+
+	padding: 10px 0;
+	padding-top:0px;
+	background-color: #CCC49F; 
+}
+
+/* The footer  */
+.footer {
+	padding: 10px 0;
+	padding-top:0;
+	background-color: #CCC49F;
+	width: 960px;
+	height:25px;
+	
+	margin-left:0 auto;
+	margin-right:0 auto;
+	bottom:0;
+	position:absolute;
+}
+.footer h6{
+	font-size:150%;
+}
+
+/* ~~ miscellaneous  ~~ */
+.fltrt {  /* float right */
+	float:right;
+	margin-left: 8px;
+}
+.fltlft { /* float left. */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* this class can be placed on a <br /> or empty div as the final element following the last floated div (within the #container) if the #footer is removed or taken out of the #container */
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+
+.button
+{
+	width: 100px;
+	padding: 5px;
+	border-radius: 3px;
+	background: white;
+	color: black;
+	text-align: center;
+}
