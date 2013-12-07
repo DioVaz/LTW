@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Facturas online</title>
-<link href="pagina_principal.css" rel="stylesheet" type="text/css">
+<link href="pagina_principal.css" rel="stylesheet" type="text/css" media="screen">
 <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 <script src="script.js"></script>
 </head>
@@ -28,10 +28,16 @@
 	<div class="button" id="submit_button2">Submit</div>
 	</form>
 <div id="customer_list">
+  
 
 
 </div>
-<form action="getAdress.php" method="get">
+<div id="adress_list">
+  <br>
+
+
+</div>
+<form action="api/getAdress.php" method="get">
 
 ID: <input type="number" name="number"><br>
 
