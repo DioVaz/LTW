@@ -11,15 +11,30 @@ $("#product_list").append('<div class="produto"><div>Codigo:' + data[0].ProductC
 
 function submit_customer_form()
 {
+
 $.getJSON("./getCustomer.php?number=" + $("#form_customer_number").val(), function(data){
 	
 $("#customer_list").append('<div class="cliente"><div>Codigo:' + data[0].CustomerID + '</div>' +
 '<div>Taxa:' + data[0].CustomerTaxID + '</div>' +
 '<div>Companhia:' + data[0].CompanyName + '</div>' +
-'<div>E-mail:' + data[0].Email + '</div>' +
-'<div>BillingAddressID :' + data[0].BillingAddressID  + '</div>');
+'<div>E-mail:' + data[0].Email + '</div>');
+
+
 });
 }
+
+function submit_adress_form()
+{
+
+$.getJSON("./getAdress.php?number=" + $("#data[0].BillingAddressID").val(), function(data){
+	
+$("#adress_list").append('<div class="adress"><div>Morada:' + data[0].CustomerID + '</div>' );
+
+
+});
+}
+
+
 
 function submit_invoice_form()
 {
