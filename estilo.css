@@ -1,10 +1,11 @@
 @charset "utf-8";
 body {
 	font: 100%/1.4 Verdana;
-	background-color: #42213D;
+	background-color: #29303D;
 	margin: 0;
 	padding: 0;
-	color: #000;
+	
+	
 }
 
 
@@ -12,18 +13,35 @@ ul, ol, dl {
 	padding: 100;
 	margin: 0;
 }
-h1, h2, h3, h4, h5, h6, p {/* Headers */
+h1, h2, h3, h4, h5,h6, p {/* Headers */
 	margin-top: 0;
 	padding-right: 15px;
 	padding-left: 15px;
-	font-size: 250%;
-	color: #FFF;
+	font-size: 270%;
+	color: #29303D;
+	font-family: Verdana;
 	
 	
 }
 
+#pageTitle h1{
+	margin-left:0;
+	
+}
+#search{
+	margin-left:25px;
+}
+
 #product_list{
 	border-bottom:thick;
+}
+
+#customer_list{
+	margin-left:50px;
+}
+
+#menu{
+	margin-right: 15px;
 }
 
 #menu a{/* menu */
@@ -31,7 +49,6 @@ h1, h2, h3, h4, h5, h6, p {/* Headers */
 	margin-right:20px;
 	border-left-style:solid;
 	border-left-color:white;
-	color:#009;
 	
 }
 
@@ -44,34 +61,49 @@ a img { /* remover contorno da imagem */
 }
 
 
-/*  link efects. ~~ */
+/*  link efects */
 a:link {
-	color: #42413C;
-	text-decoration:underline 
+	color: #45313A;
+	text-decoration:none
 }
 a:visited {
-	color: #6E6C64;
-	text-decoration: underline;
+	color: #45313A;
+	text-decoration: none;
 }
-a:hover, a:active, a:focus { /* remover a linha dos links para estes 3 eventos*/
-	text-decoration:none;
+a:hover, a:active, a:focus { 
+	color:white;
+	text-decoration:underline;
+
 }
 
-/* conteiner */
+h2:hover, h1:hover, h2:focus, h1:focus { 
+	
+	color:#45313A;
+}
+
+/* container */
 .container {
 	width: 960px;
-	background-color: #FFF;
 	margin: 0 auto; /* centrar  */
 	bottom:0;
 }
 
+
+
 /* header */
 .header {
-	margin-top:10px;
-	margin-bottom:0px;
+	margin-top:30px;
+	margin-bottom:10px;
+	padding-top: 20px;
+	padding-bottom:10px;
 	text-align:right;
-	background-color: #ADB99A;
+	background-color: #A7937E;
+	border-top-left-radius:100px;
+	border-top-right-radius:25px;
+	box-shadow: 10px 10px 5px #888888;
 }
+
+
 
 /*creditos*/
 .creditos{
@@ -81,22 +113,32 @@ a:hover, a:active, a:focus { /* remover a linha dos links para estes 3 eventos*/
 /*content*/
 
 .content {
-
 	padding: 10px 0;
 	padding-top:0px;
-	background-color: #CCC49F; 
+	position:relative;
+	background-color: #C2BBA8;
+	border-bottom-left-radius:10px;
+	border-bottom-right-radius:50px;
+	box-shadow: 10px 10px 5px #888888;
+}
+.pageTitle{
+	margin-left: 30px;
+	right: 24px;
+	border-radius:50px;
 }
 
 /* The footer  */
 .footer {
 	padding: 10px 0;
 	padding-top:0;
-	background-color: #CCC49F;
+	background-color: #A7937E;
 	width: 960px;
 	height:25px;
+	border-radius:10px;
 	
 	margin-left:0 auto;
 	margin-right:0 auto;
+	margin-bottom: 15px;
 	bottom:0;
 	position:absolute;
 }
@@ -113,7 +155,7 @@ a:hover, a:active, a:focus { /* remover a linha dos links para estes 3 eventos*/
 	float: left;
 	margin-right: 8px;
 }
-.clearfloat { /* this class can be placed on a <br /> or empty div as the final element following the last floated div (within the #container) if the #footer is removed or taken out of the #container */
+.clearfloat { 
 	clear:both;
 	height:0;
 	font-size: 1px;
@@ -122,10 +164,23 @@ a:hover, a:active, a:focus { /* remover a linha dos links para estes 3 eventos*/
 
 .button
 {
+	margin-top:7px;
+	margin-bottom:14px;
 	width: 100px;
 	padding: 5px;
-	border-radius: 3px;
+	padding-left:25px;
+	padding-right:25px;
+	border-radius:10px;
 	background: white;
 	color: black;
 	text-align: center;
+}
+
+.button:hover, .button:focus{
+	background: #29303D;
+	color: white;
+}
+.container .content .pageTitle h1 {
+	font-size: 200%;
+	
 }

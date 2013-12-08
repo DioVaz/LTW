@@ -13,23 +13,25 @@ $("#product_list").append('<div class="produto"><div>Codigo:' + data[0].ProductC
 function submit_customer_form()
 {
 
+
 $.getJSON("./api/getCustomer.php?number=" + $("#form_customer_number").val(), function(data){
 	
-$("#customer_list").append('<div class="cliente"><div>Codigo:' + data[0].CustomerID + '</div>' +
-'<div>Taxa:' + data[0].CustomerTaxID + '</div>' +
-'<div>Companhia:' + data[0].CompanyName + '</div>' +
-'<div>E-mail:' + data[0].Email + '</div>');
+$("#customer_list").empty().append('<div class="cliente"><div><strong>Numero de identificação: </strong>' + data[0].CustomerID + '</div>' +
+'<div><strong>Taxa: </strong>' + data[0].CustomerTaxID + '</div>' +
+'<div><strong>Empresa: </strong>' + data[0].CompanyName + '</div>' +
+'<div><strong>E-mail: </strong>' + data[0].Email + '</div></div>');
 
 
 });
 
 $.getJSON("./api/getAdress.php?number=" + $("#form_customer_number").val(), function(data){
 	
-$("#customer_list").append('<div class="adress"><div>Morada:' + data[0].AdressDetail + '</div>'+
-'<div>__________' + '</div>' );
+$("#customer_list").append('<div class="adress"><div><strong>Morada:</strong>' + data[0].AdressDetail + '</div>'+
+'<div>__________' + '</div></div>' );
 
 
 });
+
 }
 
 
@@ -85,6 +87,7 @@ $("#product_list").append('<div class="produto"><div>Codigo:' + data[0].ProductC
 
 $(document).ready(function(){
 $("#submit_button").click(submit_product_form);
+
 })
 
 $(document).ready(function(){
