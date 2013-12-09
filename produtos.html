@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Facturas online</title>
-<link href="pagina_principal.css" rel="stylesheet" type="text/css">
+<link href="estilo.css" rel="stylesheet" type="text/css">
 <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 <script src="script.js"></script>
 </head>
@@ -11,23 +11,24 @@
 <body>
 
 <div class="container">
- <div class="header"><a href="#"></a> <h2>Sistema de Faturas Online</h2>
+  <div class="header"><a href="#"></a> <h2>Sistema de Facturas Online</h2>
   <div id="menu">
-    <a href="principal.html" >Página Inicial</a>
-    <a href="clientes.html" >Pesquisa por Clientes</a>
-    <a href="produtos.html" >Pesquisa por Produtos</a>
-    <a href="invoice.html" >Pesquisa por Invoice</a>
-    <a href="searchCostumer.html" >Pesquisa Avançada por Clientes</a>
-    <a href="searchProduct.html" >Pesquisa Avançada por Produtos</a>
-    <a href="searchInvoice.html" >Pesquisa Avançada por Invoice</a>
+    <a href="home.html" >Pagina Inicial</a>
+    <a href="clientes.html" >Pesquisa Clientes</a>
+    <a href="produtos.html" >Pesquisa Productos</a>
+    <a href="invoice.html" >Pesquisa Invoice</a>
     </div>
   </div>
 <div class="content">
-	<form action="#" method="get">
-	Pesquisar por ID: <input id="form_product_number" type="number" name="number"><br>
+  <div class="pageTitle">
+      <h1>PAGINA PRODUTOS</h1>
+      <hr>
+	<form action="#" method="get" ID="search">
+	Pesquisar por ID: <input id="form_product_number" type="number" name="number">
 	<div class="button" id="submit_button">Submit</div>
+  <div id="product_list">
+</div>
 	</form>
-<div id="product_list">
 </div>
 </div>
 		
