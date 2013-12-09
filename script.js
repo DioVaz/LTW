@@ -42,7 +42,7 @@ function submit_invoice_form()
 {
 $.getJSON("./api/getInvoice.php?number=" + $("#form_invoice_number").val(), function(data){
 	
-$("#invoice_list").append('<div class="invoice"><div> <strong>Codigo: </strong>' + data[0].InvoiceNo + '</div>' +
+$("#invoice_list").empty().append('<div class="invoice"><div> <strong>Codigo: </strong>' + data[0].InvoiceNo + '</div>' +
 '<div> <strong>Data: </strong>' + data[0].InvoiceDate + '</div>' +
 '<div> <strong>CostumorID: </strong>' + data[0].CustomerID + '</div>' +
 '<div>__________' + '</div>' );
