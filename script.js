@@ -81,7 +81,7 @@ $("#customer_list2").append('<div class="cliente"><div> <strong>Codigo: </strong
 
 function submit_search_customer_form2()
 {
-$.getJSON("./api/searchCustomersByField.php?field=" + $("#form_customer_camp").val() + "&company=" + $("#form_customer_x").val(), function(data){
+$.getJSON("./api/searchCustomersByField.php?field=" + $("#form_customer_camp2").val() + "&company=" + $("#form_customer_x").val(), function(data){
 	
 $("#customer_list3").append('<div class="cliente"><div> <strong>Codigo: </strong>' + data[0].CustomerID + '</div>' +
 '<div> <strong>Taxa: </strong>' + data[0].CustomerTaxID + '</div>' +

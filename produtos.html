@@ -23,9 +23,21 @@
   <div class="pageTitle">
       <h1>PAGINA PRODUTOS</h1>
       <hr>
-	 <form action="#" method="get" id="search">
+
+      <form action="#" method="get" ID="search">
+  Pesquisar por ID: <input id="form_product_number" type="number" name="number"><br>
+  <div class="button" id="submit_button3">Submit</div>
+  <div id="product_list">
+</div>
+
+  <hr>
+
+	<form action="#" method="get" id="search">
   
-  Pesquisar por: <input id="form_product_camp" type="text" name="field"><br>
+  Pesquisar avançada: <br>
+
+  <input id="form_product_camp" type="radio" name="field" value="ProductCode">ProductCode<br>
+  <input id="form_product_camp" type="radio" name="field" value="UnitPrice">UnitPrice<br>
   
   <form action="#" method="get" id="search">
   Dado: <input id="form_product_number2" type="number" name="number2"><br>
