@@ -68,7 +68,6 @@ $("#invoice_list2").append('<div class="invoice"><div> <strong>Codigo: </strong>
 function submit_search_customer_form()
 {
 $.getJSON("./api/searchCustomersByField.php?field=" + $("#form_customer_camp").val() + "&number=" + $("#form_customer_number2").val(), function(data){
-	
 $("#customer_list2").append('<div class="cliente"><div> <strong>Codigo: </strong>' + data[0].CustomerID + '</div>' +
 '<div> <strong>Taxa: </strong>' + data[0].CustomerTaxID + '</div>' +
 '<div> <strong>Companhia: </strong>' + data[0].CompanyName + '</div>' +

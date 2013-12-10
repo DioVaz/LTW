@@ -6,7 +6,7 @@ $base = new PDO('sqlite:base2.db');
 if($_GET['field'] == 'CustomerID'){
 
 	$stmt = $base->prepare('SELECT * FROM customer WHERE CustomerID = :value1');
-	$stmt->bindParam(':value1',$_GET['number2'], PDO::PARAM_INT);
+	$stmt->bindParam(':value1',$_GET['number'], PDO::PARAM_INT);
 	$stmt->execute();
 	$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 	}
