@@ -1,31 +1,29 @@
 <?php 
 
 $base = new PDO('sqlite:base2.db');
-
-function DisplayInvoice($article){
-
-	if(is_array($article))
-		$x= array('InvoiceNo'=>$article['InvoiceNo'],'<br>'.'InvoiceDate'=>$article['InvoiceDate']);
-			echo json_encode($x);
-			echo '<br />','<br />';
-}
 	
 if($_GET['field'] == 'InvoiceNo'){
 
-	$stmt = $base->prepare('SELECT * FROM invoice WHERE InvoiceNo = :n');
-	$stmt->bindParam(':n',$_GET['number'], PDO::PARAM_INT);
+	$stmt = $base->prepare('SELECT * FROM invoice WHERE InvoiceNo = :value1');
+	$stmt->bindParam(':value1',$_GET['number'], PDO::PARAM_INT);
 	$stmt->execute();
+	$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 	}
 	
 elseif($_GET['field'] == 'CustomerID'){
-	$stmt = $base->prepare('SELECT * FROM invoice WHERE CustomerID = :n');
-	$stmt->bindParam(':n',$_GET['number'], PDO::PARAM_INT);
+	$stmt = $base->prepare('SELECT * FROM invoice WHERE CustomerID = :value2');
+	$stmt->bindParam(':value2',$_GET['number'], PDO::PARAM_INT);
 	$stmt->execute();
+	$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
  	
-	while ($article=$stmt->fetchAll(PDO::FETCH_ASSOC){
-	DisplayInvoice($article);
-}
+if(is_array($result)){
+		echo json_encode($result);
+	}
+	else{
+		$erro = array('code' => '404', 'reason' => 'Customer not found');
+		echo json_encode($erro);
+	}
 	
  	
 	
