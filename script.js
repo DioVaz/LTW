@@ -1,3 +1,10 @@
+function submit_login_form(){
+
+	console.log('cenas');
+	$.get("LogIn.php", {email: "ei09001@fe.up.pt", pass: "1234"});
+}
+	
+
 function submit_product_form()
 {
 $.getJSON("./api/getProduct.php?number=" + $("#form_product_number").val(), function(data){
@@ -108,4 +115,9 @@ $("#submit_button5").click(submit_search_costumer_form);
 
 $(document).ready(function(){
 $("#submit_button6").click(submit_search_product_form);
+});
+
+$(document).ready(function(){
+	console.log('teste 1');
+$("#form_customer_number").on('click',submit_login_form);
 });
