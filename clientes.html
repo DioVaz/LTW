@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Facturas online</title>
+<title>Faturas online</title>
 <link href="estilo.css" rel="stylesheet" type="text/css" media="screen">
 <link href="print.css" rel="stylesheet" type="text/css" media="print">
 <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
@@ -12,12 +12,12 @@
 <body>
 
 <div class="container">
-  <div class="header"><a href="#"></a> <h1>Sistema de Facturas Online</h1>
-  	<div id="menu">
-	    <a href="home.html" >Pagina Inicial</a>
-	    <a href="clientes.html" >Pesquisa Clientes</a>
-	    <a href="produtos.html" >Pesquisa Productos</a>
-	    <a href="invoice.html" >Pesquisa Invoice</a>
+  <div class="header"><a href="#"></a> <h2>Sistema de Faturas Online</h2>
+  <div id="menu">
+    <a href="home.html" >Página Inicial</a>
+    <a href="clientes.html" >Pesquisa Clientes</a>
+    <a href="produtos.html" >Pesquisa Productos</a>
+    <a href="invoice.html" >Pesquisa Invoice</a>
     </div>
   </div>
   
@@ -32,22 +32,37 @@
     <div id="customer_list">
     </div>
 	</form>
+
+
   <hr>
+
+
+    Pesquisa Avançada: <br>
   <form action="#" method="get" id="search">
-  
-  Pesquisar por: <input id="form_costumer_camp" type="text" name="field"><br>
-  Dado: <input id="form_costumer_number" type="number" name="number"><br>
+
+  <input id="form_customer_camp" type="radio" name="field" value="CustomerID">CustomerID
+  <input id="form_customer_number2" type="number" name="number"><br>
+
 
   <div class="button" id="submit_button5">Submit</div>
-  <div id="costumer_list">
-</div>
-  </form>
-    </div>
-    
-	
-    
-</div>	
+  <div id="customer_list2">
+  </div>
+ </form>
 
+  <form action="#" method="get" id="search">
+
+  <input id="form_customer_camp2" type="radio" name="field" value="CompanyName">CompanyName
+  <input id="form_customer_x" type="text" name="company"><br>
+
+  <div class="button" id="submit_button7">Submit</div>
+  <div id="customer_list3">
+  </div>  
+</form>
+
+
+</div>
+</div>
+    
 	
   <div class="footer">
     <h6>PROJECTO LTW</h6>

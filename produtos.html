@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Facturas online</title>
+<title>Faturas online</title>
 <link href="estilo.css" rel="stylesheet" type="text/css">
 <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 <script src="script.js"></script>
@@ -11,9 +11,9 @@
 <body>
 
 <div class="container">
-  <div class="header"><a href="#"></a> <h2>Sistema de Facturas Online</h2>
+  <div class="header"><a href="#"></a> <h2>Sistema de Faturas Online</h2>
   <div id="menu">
-    <a href="home.html" >Pagina Inicial</a>
+    <a href="home.html" >Página Inicial</a>
     <a href="clientes.html" >Pesquisa Clientes</a>
     <a href="produtos.html" >Pesquisa Productos</a>
     <a href="invoice.html" >Pesquisa Invoice</a>
@@ -23,12 +23,31 @@
   <div class="pageTitle">
       <h1>PAGINA PRODUTOS</h1>
       <hr>
-	<form action="#" method="get" ID="search">
-	Pesquisar por ID: <input id="form_product_number" type="number" name="number">
-	<div class="button" id="submit_button">Submit</div>
+
+      <form action="#" method="get" ID="search">
+  Pesquisar por ID: <input id="form_product_number" type="number" name="number"><br>
+  <div class="button" id="submit_button">Submit</div>
   <div id="product_list">
 </div>
+ </form>
+  <hr>
+	Pesquisar avançada: <br>
+	<form action="#" method="get" id="search">
+  
+  
+
+  <input id="form_product_camp" type="radio" name="field" value="ProductCode">ProductCode<br>
+  <input id="form_product_camp" type="radio" name="field" value="UnitPrice">UnitPrice<br>
+  
+  <form action="#" method="get" id="search">
+  Dado: <input id="form_product_number2" type="number" name="number"><br>
+
+  <div class="button" id="submit_button6">Submit</div>
+  <div id="product_list2">
+  </div>  
+    </form>
 	</form>
+   
 </div>
 </div>
 		

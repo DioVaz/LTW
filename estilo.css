@@ -184,9 +184,9 @@ h2:hover, h1:hover, h2:focus, h1:focus {
 
 .button:hover, .button:focus{
 	background: #29303D;
-	color: black;
+	color: white;
 }
 .container .content .pageTitle h1 {
 	font-size: 200%;
-	
+	margin-bottom:10px;
 }
