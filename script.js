@@ -81,9 +81,8 @@ $("#customer_list2").empty().append('<div class="cliente"><div> <strong>Codigo: 
 
 function submit_search_customer_form2()
 {
-$.getJSON("./api/searchCustomersByField.php?field=" + $("#form_customer_camp2").val() + "&company=" + $("#form_customer_x").val(), function(data){
-	
-$("#customer_list3").empty().append('<div class="cliente"><div> <strong>Codigo: </strong>' + data[0].CustomerID + '</div>' +
+$.getJSON("./api/searchCustomersByField.php?field=" + $("#form_customer_camp").val() + "&number=" + $("#form_customer_number2").val(), function(data){
+$("#customer_list2").empty().append('<div class="cliente"><div> <strong>Codigo: </strong>' + data[0].CustomerID + '</div>' +
 '<div> <strong>Taxa: </strong>' + data[0].CustomerTaxID + '</div>' +
 '<div> <strong>Companhia: </strong>' + data[0].CompanyName + '</div>' +
 '<div> <strong>E-mail: </strong>' + data[0].Email + '</div>' +
@@ -130,7 +129,10 @@ $("#submit_button5").click(submit_search_customer_form);
 
 $(document).ready(function(){
 $("#submit_button6").click(submit_search_product_form);
+<<<<<<< HEAD
 
+=======
+>>>>>>> 57188498fe8e72338bb6a2316b7d0caf120e5530
 })
 
 $(document).ready(function(){
